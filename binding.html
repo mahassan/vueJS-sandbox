@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .is-loading{
+            background:red;
+            transform:rotate(180deg);
+            transition: all;
+            transition-duration: 25ms;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="root">
+        <button 
+        :class="{'is-loading': isLoading }" 
+        @mouseout="isLoading = false"
+        @mouseover="toggleClass">Click me</button>
+        <div class="card-flip">
+            <div>
+                <p v-if="isLoading">this should work when clicked or hovered</p>
+            </div>
+
+        </div>
+    </div> -->
+    <div id="root">
+            <card-info></card-info>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="binding.js"></script>
+        <script>
+        // var app = new Vue({
+        //     el : '#root',
+        //     data: {
+        //         isLoading: false
+        //     },
+        //     methods:{
+        //         toggleClass(){
+        //             this.isLoading = true;
+        //         }
+        //     }
+        // })
+        </script>
+</body>
+</html>

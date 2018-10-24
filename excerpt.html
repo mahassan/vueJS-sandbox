@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sentence = 
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar mi a pulvinar vehicula. Nam et mi eu dui eleifend sollicitudin at pulvinar lectus. Nam quis pellentesque magna, in mollis.";
+        function excerptText(sentence) {
+            let excerpt = sentence.split(" ");
+            console.log(excerpt);
+            if (excerpt.length > 10) {
+                this.resultArray = excerpt.slice(0, 25);
+                excerpt = this.resultArray.join(" ") + "...";
+                return `this is more than 10 : ${excerpt}`;
+            } else {
+                return "sentence is shorter then 10 char : "+sentence;
+            }
+        }
+
+        let result = console.log(excerptText(sentence))
+    </script>
+</body>
+
+</html>

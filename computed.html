@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Completed Task</h1>
+        <ul>
+            <li v-for="task in tasks" v-text="task.name"></li>
+        </ul>
+
+        <h1>Incompleted Task</h1>
+        <ul>
+                <li v-for="task in Incompleted" v-text="task.name"></li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue ({
+            el : '#container',
+            data : {
+                tasks : [
+                    {name: "layout", completed: false},
+                    {name: "Homepage", completed: true},
+                    {name: "Secured loans", completed: true},
+                    {name: "Contact page", completed: true},
+                    {name: "Consolidate", completed: true},
+                    {name: "2nd Change Mortgage", completed: true},
+                    {name: "Mortgages Landing Page", completed: true},
+                    {name: "Terms and Conditions", completed: true},
+                    {name: "Privacy Policy", completed: true},
+                    {name: "Complaints", completed: false}
+                ]
+            },
+            computed : {
+                Incompleted() {
+                    return this.tasks.filter(task => !task.completed)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

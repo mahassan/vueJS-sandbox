@@ -1,0 +1,17 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bs-to-vue.js",
+  "scripts": {
+    "test": "-"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/cli": "^3.0.3",
+    "bulma": "^0.7.1",
+    "vuetify": "^1.2.3"
+  },
+  "devDependencies": {}
+}

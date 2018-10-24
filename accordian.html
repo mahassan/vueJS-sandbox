@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .less:after{
+            content: "up"
+        }
+        .more:before{
+            content:"down"
+        }
+    </style>
+</head>
+<body>
+    <div id="boot">
+        <select v-on:change="filterList">
+            <option v-for="item in uniqueItemList ">{{item}}</option>
+        </select>
+        <ul>
+            <li 
+            v-for="media in mediaList" 
+            v-on:click="toggleDetails(media)" 
+            v-show="type === '' || type === media.type"
+            v-bind:class="{less: media.showDetail, more:!media.showDetail}">
+                    <h2>{{media.title}}</h2>
+                    <div v-show="media.showDetail">
+                        <p>{{media.description}}</p>
+                        <p v-if="media.contributor"><em>By: </em>{{media.contributor}}</p>
+                    </div>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="accordian.js"></script>
+</body>
+</html>

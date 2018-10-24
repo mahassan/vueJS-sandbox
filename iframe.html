@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/solid.css" integrity="sha384-osqezT+30O6N/vsMqwW8Ch6wKlMofqueuia2H7fePy42uC05rm1G+BUPSd2iBSJL"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/fontawesome.css" integrity="sha384-BzCy2fixOYd0HObpx3GMefNqdbA7Qjcc91RgYeDjrHTIEXqiF00jKvgQG0+zY/7I"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at molestie mi. Sed vitae lacinia lorem.
+            Nam vulputate magna nunc, eget convallis justo consequat eget. Donec lobortis blandit nibh, ac luctus
+            ligula mattis nec. Aenean dignissim egestas est, non vestibulum nibh. Nulla vehicula, ante vitae gravida
+            ultricies, diam purus facilisis lorem, quis facilisis sem libero sed nulla. In bibendum quam vel nulla
+            vehicula cursus. Suspendisse pellentesque in ante id pellentesque. Nulla elementum massa lacinia dui
+            pellentesque sagittis. Vivamus quis lobortis sapien, ut dignissim urna. Proin mollis libero quis aliquam
+            luctus.
+
+            Ut feugiat feugiat orci in accumsan. Phasellus tincidunt sollicitudin augue ut ultrices. Maecenas a dolor
+            ipsum. Phasellus fermentum hendrerit orci, ac scelerisque mauris hendrerit sed. Proin eu quam lectus. In
+            quis metus ut dolor suscipit cursus non ac erat. Nulla facilisi. Ut molestie, dui sit amet interdum
+            condimentum, odio neque congue dolor, eget bibendum ipsum metus vel lacus. Nulla facilisi. Vivamus
+            malesuada orci vitae nibh faucibus, eu convallis arcu pretium.
+
+            Donec fermentum tempor orci sed vulputate. Fusce eu interdum libero. Nunc in iaculis tellus. Suspendisse
+            potenti. Vestibulum ornare erat vestibulum ante rutrum fermentum. Cras nec egestas quam. Nam fringilla nec
+            nunc at dignissim. Aliquam non scelerisque massa. Integer nec sem vitae arcu dictum pharetra. Donec nisi
+            massa, placerat ut scelerisque vitae, pharetra tempor eros. Ut iaculis quam tortor.
+
+            Donec augue mi, fringilla ornare iaculis ut, efficitur pulvinar nisi. Nulla non est a diam tempus tincidunt
+            elementum in purus. Nulla facilisi. Pellentesque iaculis diam ut diam dictum volutpat. Nulla gravida,
+            libero volutpat rutrum porttitor, urna tortor consectetur magna, non ultrices ex urna eu sapien. Duis
+            rutrum gravida lobortis. Sed suscipit ligula augue, vel finibus nisi ornare et. Aliquam purus ligula,
+            vestibulum at molestie in, aliquam eget purus. Duis volutpat scelerisque metus, quis malesuada lacus
+            consequat quis.
+
+            Praesent euismod ornare leo vel dictum. Duis libero mauris, fermentum eget efficitur sit amet, placerat a
+            dui. Mauris pretium eros id laoreet viverra. Curabitur eu tortor ac ex blandit congue eu in nibh. Curabitur
+            id facilisis enim. Ut dapibus ipsum non lacus placerat porta. Fusce pulvinar massa at rhoncus molestie
+        </p>
+        <p>1914 translation by H. Rackham
+            "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and
+            I will give you a complete account of the system, and expound the actual teachings of the great explorer of
+            the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself,
+            because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter
+            consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to
+            obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and
+            pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious
+            physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man
+            who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces
+            no resultant pleasure</p>
+        <button @click="openModal">Show</button>
+
+        <div class="overlay" v-show="overlay">
+
+            <i class="fas fa-times-circle fa-7x" @click="closeModel"></i>
+            <div class="modal-parent">
+                <div class="modal-content">
+                    <iframe frameborder="0" height="650" width="100%" scrolling="yes" src="https://mortgages.mbl.co.uk/bc1487/(S(svyuub0nsn3rmzqosmqhfpge))/default.aspx?sid=6ab577d6b1bf4142b60ebbdb1d16b123">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!',
+                overlay: false
+            },
+            methods: {
+                openModal() {
+                    console.log("yes");
+                    this.overlay = true;
+                },
+                closeModel() {
+                    this.overlay = false;
+                }
+            },
+        })
+    </script>
+    <style>
+        body {
+            top: 0;
+            left: 0;
+            position: relative;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 200, 25, 1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .fas {
+            cursor: pointer;
+            align-self: flex-end;
+        }
+
+        .modal-parent {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            background: rgb(128, 182, 218)
+        }
+
+        .modal-content {
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            background: plum;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: scroll;
+        }
+    </style>
+</body>
+
+</html>
